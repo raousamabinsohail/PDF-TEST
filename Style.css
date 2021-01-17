@@ -245,7 +245,7 @@ button:hover {
   margin-left: -100px;
   margin-top: 0px;
 }
-@media screen and (min-width: 1000px) and (min-height: 1800px) {
+@media screen and (min-width: 1000px) and (min-height: 1700px) {
   body {
     max-width: 500px;
   }
