@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+label{
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+#form-part-third label{
+  font-weight: normal;
+  font-size: 15px;
+}
+#form-part-third{
+  font-weight: bold;
+  font-size: 18px;
+}
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: #ffffff;
+  min-height: 80vh;
+  /* margin: 12% auto; */
+  margin-top: 5%;
+  margin-left: 5%;
+  font-family: Raleway;
+  padding: 40px;
+  min-width: 1400px;
+  max-width: 1400px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+.page-wraper {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-col {
+  /* border: 2px solid black; */
+  width: 50%;
+}
+.left-col {
+  /* display: flex; */
+  /* flex-direction: row; */
+
+  width: 50%;
+}
+
+.left-col2 {
+  display: flex;
+  flex-direction: row;
+
+  width: 50%;
+}
+
+.left-col2 .first-div {
+  width: 55%;
+}
+
+.left-col2 .second-div {
+  width: 45%;
+}
+
+input {
+  width: 90%;
+}
+
+button {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  /* margin-right: 10%; */
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+.radio-class {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  /* border: 2px solid black; */
+}
+.radio-class input {
+  padding: 0px;
+}
+.radio-class div {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 2.5%;
+}
+.second-div .radio-class p{
+  margin-left: 10px;
+}
+.radio-class select{
+   width: 50px !important;
+}
+.second-div  textarea{
+  width: 250px !important;
+  border: 2px solid black;
+}
+.left-col2 .first-div .radio-class div {
+  padding-top: 2%;
+}
+.left-col2 .second-div .radio-class div {
+  padding-top: 2%;
+}
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4caf50;
+}
+
+/* ************* canvas *********** */
+
+.canvas-draw-box {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.clear-canvas {
+  position: absolute;
+  top: 95%;
+  left: 10%;
+  width: 80px;
+}
+.eraser-canvas {
+  position: absolute;
+  top: 99%;
+  left: 19.5%;
+  font-size: 12px;
+
+}
+.eraser-white-color-canvas {
+  position: absolute;
+  top: 95%;
+  left: 20%;
+  background: white;
+  border: 2px solid;
+}
+.canvas-pen-common {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  cursor: pointer;
+}
+.canvas-red-pen {
+  top: 95%;
+  left: 23%;
+  background: red;
+}
+.canvas-yellow-pen {
+  position: absolute;
+  top: 95%;
+  left: 26%;
+  background: yellow;
+}
+
+.canvas-orange-pen {
+  top: 95%;
+  left: 29%;
+  background: orange;
+}
+.canvas-black-pen {
+  top: 95%;
+  left: 32%;
+  background: black;
+}
+.signature {
+  border: 1px solid black;
+  width: 45%;
+  height: 30%;
+}
+#sheet {
+  border:2px solid black;
+  z-index: 1;
+}
+#h4-image-title{
+  margin-top: -20px;
+}
+
+.canvas-daw-signature{
+
+  border:2px solid black;
+  margin-left: 50px;
+
+  
+}
+
+#eraser-canvas-2{
+  margin-left: 550px;
+  margin-top: -px;
+}
+
+#black1{
+  margin-left: 400px;
+}
+#black2{
+  margin-left: -100px;
+  margin-top: 0px;
+}
+.paddingleft{
+  
+}
