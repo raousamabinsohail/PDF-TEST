@@ -82,15 +82,15 @@ function generate() {
 
   //***********Form Page 2********** */
 
-  // h = h + 20;
-  // doc.setFontSize(16);
-  // doc.setFontType("bold");
-  // doc.text(
-  //   w,
-  //   h,
-  //   "Please indicate the areas that you would like the therapist to focus on:"
-  // );
-  // h = h + 10;
+  h = h + 20;
+  doc.setFontSize(16);
+  doc.setFontType("bold");
+  doc.text(
+    w,
+    h,
+    "Please indicate the areas that you would like the therapist to focus on:"
+  );
+  h = h + 10;
 
   console.log("--------------------->", window.bodyImg);
   doc.addImage(window.bodyImg, "JPEG", w + 10, h, 180, 130);
