@@ -1,16 +1,16 @@
 * {
   box-sizing: border-box;
 }
-label{
+label {
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 20px;
 }
-#form-part-third label{
+#form-part-third label {
   font-weight: normal;
   font-size: 15px;
 }
-#form-part-third{
+#form-part-third {
   font-weight: bold;
   font-size: 18px;
 }
@@ -136,13 +136,13 @@ button:hover {
   flex-direction: row;
   padding-top: 2.5%;
 }
-.second-div .radio-class p{
+.second-div .radio-class p {
   margin-left: 10px;
 }
-.radio-class select{
-   width: 50px !important;
+.radio-class select {
+  width: 50px !important;
 }
-.second-div  textarea{
+.second-div textarea {
   width: 250px !important;
   border: 2px solid black;
 }
@@ -178,7 +178,6 @@ button:hover {
   top: 99%;
   left: 19.5%;
   font-size: 12px;
-
 }
 .eraser-white-color-canvas {
   position: absolute;
@@ -221,33 +220,67 @@ button:hover {
   height: 30%;
 }
 #sheet {
-  border:2px solid black;
+  border: 2px solid black;
+  margin-top: 10px;
   z-index: 1;
 }
-#h4-image-title{
+#h4-image-title {
   margin-top: -20px;
 }
 
-.canvas-daw-signature{
-
-  border:2px solid black;
+.canvas-daw-signature {
+  border: 2px solid black;
   margin-left: 50px;
-
-  
 }
 
-#eraser-canvas-2{
+#eraser-canvas-2 {
   margin-left: 550px;
   margin-top: -px;
 }
 
-#black1{
+#black1 {
   margin-left: 400px;
 }
-#black2{
+#black2 {
   margin-left: -100px;
   margin-top: 0px;
 }
-.paddingleft{
-  
+@media screen and (min-width: 1000px) and (min-height: 1800px) {
+  body {
+    max-width: 500px;
+  }
+  #sheet {
+    border: 2px solid black;
+    z-index: 1;
+    padding: 0%;
+    margin-top: -450px;
+    max-width: 410px !important;
+    margin-left: -15px;
+    height: 310px !important;
+  }
+  #regForm {
+    padding: 40px;
+    min-width: 970px !important;
+    max-width: 970px !important;
+  }
+  img {
+    max-width: 450px;
+  }
+  .left-col2 .first-div .radio-class p {
+    margin-left: 40px;
+    font-size: 14px;
+  }
+  .left-col2 .second-div .radio-class p {
+    margin-left: 40px;
+    font-size: 14px;
+  }
+  .second-div textarea {
+    margin-top: 50px;
+    width: 220px !important;
+    border: 2px solid black;
+  }
+  #sheet2 {
+    width: 300px !important;
+    height: 150px !important;
+  }
 }
