@@ -1,151 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway"
-      rel="stylesheet"
-    />
-    <link href="./Style.css" rel="stylesheet" />
-    <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
-    ></script>
-    <!-- <script type="text/javascript" src="html2canvas.js"></script> -->
-    <script
-      type="text/javascript"
-      src="https://html2canvas.hertzen.com/dist/html2canvas.js"
-    ></script>
 
-    <!-- <script src="./html2canvas.js"></script> -->
-    <!-- <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js'></script> -->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+  <link href="./Style.css" rel="stylesheet" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="html2canvas.js"></script> -->
+  <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
-    <!-- PDF LIBRARY -->
+  <!-- <script src="./html2canvas.js"></script> -->
+  <!-- <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js'></script> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.0/jspdf.umd.min.js"></script>
+  <!-- PDF LIBRARY -->
 
-    <!--  ******************************************************************************** -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
-      integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.0/jspdf.umd.min.js"></script>
+
+  <!--  ******************************************************************************** -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+    integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+    crossorigin="anonymous"></script>
+  <!-- <script
       type="text/javascript"
       src="http://paperjs.org/assets/js/paper.js"
     ></script> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.11/paper-full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.11/paper-full.min.js"></script>
 
-    <script src="./pdf.js"></script>
-  </head>
+  <script src="./pdf.js"></script>
+</head>
 
-  <body onload="">
-    <!-- <button onclick="generate()">PRINT</button> -->
-    <form id="regForm" action="/action_page.php">
-      <!-- <h1>Client History & Consent Form</h1> -->
-      <!-- One "tab" for each step in the form: -->
-      <div class="tab" id="form-part-first">
-        <h1 class="main-heading-pdf">Client History & Consent Form</h1>
-        <h2>Personal information :</h2>
-        <div class="page-wraper">
-          <div class="right-col">
-            <label>Name:</label>
-            <p>
-              <input
-                placeholder="First name..."
-                oninput="this.className = ''"
-                name="name"
-                id="name"
-                type="text"
-                required
-              />
-            </p>
-            <label>Contact number:</label>
-            <p>
-              <input
-                placeholder="Contact number..."
-                oninput="this.className = ''"
-                id="cnum"
-                name="contact-num"
-                type="number"
-              />
-            </p>
-            <label>Gender:</label>
-            <p>
-              <select style="width: 90%; padding: 12px" id="gendert">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </p>
-            <label>Referred by:</label>
-            <p>
-              <input
-                placeholder="First name..."
-                oninput="this.className = ''"
-                id="referred-by"
-                type="text"
-              />
-            </p>
-          </div>
-          <div class="left-col">
-            <label>Date of birth:</label>
-            <p>
-              <input
-                style="padding: 8px"
-                placeholder="DOB"
-                oninput="this.className = ''"
-                id="DOB"
-                type="date"
-              />
-            </p>
-            <label>Email:</label>
-            <p>
-              <input
-                placeholder="@Email..."
-                oninput="this.className = ''"
-                id="email"
-                name="email"
-                type="email"
-              />
-            </p>
-            <label>Occupation:</label>
-            <p>
-              <input
-                placeholder="Occupation..."
-                oninput="this.className = ''"
-                id="occupation"
-                type="text"
-              />
-            </p>
-            <label>Physician:</label>
-            <p>
-              <input
-                placeholder="Physician..."
-                oninput="this.className = ''"
-                id="physician"
-                type="text"
-              />
-            </p>
-          </div>
+<body onload="">
+  <!-- <button onclick="generate()">PRINT</button> -->
+  <form id="regForm" action="/action_page.php">
+    <!-- <h1>Client History & Consent Form</h1> -->
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab" id="form-part-first">
+      <h1 class="main-heading-pdf">Client History & Consent Form</h1>
+      <h2>Personal information :</h2>
+      <div class="page-wraper">
+        <div class="right-col">
+          <label>Name:</label>
+          <p>
+            <input placeholder="First name..." oninput="this.className = ''" name="name" id="name" type="text"
+              required />
+          </p>
+          <label>Contact number:</label>
+          <p>
+            <input placeholder="Contact number..." oninput="this.className = ''" id="cnum" name="contact-num"
+              type="number" />
+          </p>
+          <label>Gender:</label>
+          <p>
+            <select style="width: 90%; padding: 12px" id="gendert">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </p>
+          <label>Referred by:</label>
+          <p>
+            <input placeholder="First name..." oninput="this.className = ''" id="referred-by" type="text" />
+          </p>
         </div>
-        <label>How did you hear about us?</label>
-        <p>
-          <input
-            style="width: 95%"
-            placeholder="I hear about you ..."
-            oninput="this.className = ''"
-            id="aboutus"
-            type="text"
-          />
-        </p>
+        <div class="left-col">
+          <label>Date of birth:</label>
+          <p>
+            <input style="padding: 8px" placeholder="DOB" oninput="this.className = ''" id="DOB" type="date" />
+          </p>
+          <label>Email:</label>
+          <p>
+            <input placeholder="@Email..." oninput="this.className = ''" id="email" name="email" type="email" />
+          </p>
+          <label>Occupation:</label>
+          <p>
+            <input placeholder="Occupation..." oninput="this.className = ''" id="occupation" type="text" />
+          </p>
+          <label>Physician:</label>
+          <p>
+            <input placeholder="Physician..." oninput="this.className = ''" id="physician" type="text" />
+          </p>
+        </div>
       </div>
+      <label>How did you hear about us?</label>
+      <p>
+        <input style="width: 95%" placeholder="I hear about you ..." oninput="this.className = ''" id="aboutus"
+          type="text" />
+      </p>
+    </div>
 
-      <!-- canvas draw  -->
-      <div class="tab" id="form-part-second">
-        <h1 class="main-heading-pdf">Client History & Consent Form</h1>
-        <h2>Symptomas :</h2>
-        <script type="text/paperscript" canvas="sheet">
+    <!-- canvas draw  -->
+    <div class="tab" id="form-part-second">
+      <h1 class="main-heading-pdf">Client History & Consent Form</h1>
+      <h2>Symptomas :</h2>
+      <script type="text/paperscript" canvas="sheet">
           var path;
           window.pencolor = "black";
           console.log("pen color",window.pencolor)
@@ -174,601 +121,492 @@
               path.simplify(5);
           }
         </script>
-        <div class="page-wraper">
-          <div class="right-col" id="bodyImg">
-            <h4 id="h4-image-title">
-              Please indicate the areas that you would like the therapist to
-              focus on:
-            </h4>
-            <img src="./img/body1.jpg" />
-            <canvas
-              class="canvas-draw-box"
-              id="sheet"
-              width="550px"
-              height="420px"
-            ></canvas>
+      <div class="page-wraper">
+        <div class="right-col" id="bodyImg">
+          <h4 id="h4-image-title">
+            Please indicate the areas that you would like the therapist to
+            focus on:
+          </h4>
+          <img src="./img/body1.jpg" />
+          <canvas class="canvas-draw-box" id="sheet" width="390%" height="420"></canvas>
+        </div>
+        <!-- ******************id="can"  canvas ************** -->
+
+        <div class="left-col">
+          <div class="eraser-white-color-canvas canvas-pen-common" id="eraser-canvas"></div>
+          <div class="eraser-canvas" id="eraser-canvas">Eraser</div>
+          <div class="canvas-black-pen canvas-pen-common" id="black2"></div>
+
+          <label>Exact location of symptom :</label>
+          <p>
+            <input placeholder="Symptom location ..." oninput="this.className = ''" id="locOfSym" type="text" />
+          </p>
+          <label>Cause of symptom :</label>
+          <p>
+            <input placeholder="Symptom cause ..." oninput="this.className = ''" id="COS" type="text" />
+          </p>
+          <label>Duration of symptom: </label>
+          <p>
+            <input placeholder="Symptom duration ..." oninput="this.className = ''" id="DOS" type="text" />
+          </p>
+          <label>Type of pain feeling : </label>
+          <p>
+            <input placeholder="Pain type  ..." oninput="this.className = ''" id="TOPF" type="text" />
+          </p>
+          <label>Intensity of pain(1 to 10, 10 the strongest): </label>
+          <p>
+            <input placeholder="Pain type  ..." oninput="this.className = ''" id="PI" type="number" min="0" max="10" />
+          </p>
+          <label>Other treatments & outcomes: </label>
+          <p>
+            <textarea style="width: 90%; height: 100px; resize: none" placeholder="Treatments & outcomes..."
+              oninput="this.className = ''" id="OTO" type="text"></textarea>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="tab" id="form-part-third">
+      <h1 class="main-heading-pdf">Client History & Consent Form</h1>
+      <h2>Medical history & Condition :</h2>
+      <div class="page-wraper">
+        <div class="right-col">
+          <h4>Medical history :</h4>
+          <!-- Injuries -->
+          <div class="radio-class">
+            <p>Injuries :</p>
+            <div>
+              <input type="radio" id="InYes" name="Injuries" value="Yes" />
+              <label>Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="InNo" name="Injuries" value="No" checked="checked" />
+              <label>No</label>
+            </div>
           </div>
-          <!-- ******************id="can"  canvas ************** -->
+          <p>
+            <input placeholder="Please specify  ..." oninput="this.className = ''" id="injuries-sp" type="text" />
+          </p>
+          <!-- Medications -->
 
-          <div class="left-col">
-            <div
-              class="eraser-white-color-canvas canvas-pen-common"
-              id="eraser-canvas"
-            ></div>
-            <div class="eraser-canvas" id="eraser-canvas">Eraser</div>
-            <div class="canvas-black-pen canvas-pen-common" id="black2"></div>
+          <div class="radio-class">
+            <p>Medications :</p>
+            <div>
+              <input type="radio" id="meYes" name="Medications" value="Yes" />
+              <label>Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="meNo" name="Medications" value="No" checked="checked" />
+              <label>No</label>
+            </div>
+          </div>
+          <p>
+            <input placeholder="Please specify  ..." oninput="this.className = ''" id="Medications-sp" type="text" />
+          </p>
+          <!-- Allergies to oil -->
 
-            <label>Exact location of symptom :</label>
+          <div class="radio-class">
+            <p>Allergies to oil :</p>
+            <div>
+              <input type="radio" id="alYes" name="Allergies-to-oil" value="Yes" />
+              <label>Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="alNo" name="Allergies-to-oil" value="No" checked="checked" />
+              <label>No</label>
+            </div>
+          </div>
+          <p>
+            <input placeholder="Please specify  ..." oninput="this.className = ''" id="Allergies-to-oil-sp"
+              type="text" />
+          </p>
+          <!-- Regular exercise   -->
+          <div class="radio-class">
+            <p>Regular exercise :</p>
+            <div>
+              <input type="radio" id="reYes" name="Regular-exercise" value="Yes" />
+              <label>Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="reNo" name="Regular-exercise" value="No" checked="checked" />
+              <label>No</label>
+            </div>
+          </div>
+          <p>
+            <input placeholder="Please specify  ..." oninput="this.className = ''" id="Regular-exercise-sp"
+              type="text" />
+          </p>
+
+          <!-- Pregnancy -->
+          <div class="radio-class">
+            <p>Pregnancy :</p>
+            <div>
+              <input type="radio" id="pYes" name="Pregnancy" value="Yes" />
+              <label>Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="pNo" name="Pregnancy" value="No" checked="checked" />
+              <label>No</label>
+            </div>
+          </div>
+          <p>
+            <input placeholder="How many weeks?   ..." oninput="this.className = ''" id="Pregnancy-sp" type="number"
+              min="1" max="40" />
+          </p>
+        </div>
+        <div class="left-col2">
+          <div class="first-div">
             <p>
-              <input
-                placeholder="Symptom location ..."
-                oninput="this.className = ''"
-                id="locOfSym"
-                type="text"
-              />
+              Medical Conditions (please mark “X” for current one(s) , “P” for
+              past history and “F” for family history ) :
             </p>
-            <label>Cause of symptom :</label>
-            <p>
-              <input
-                placeholder="Symptom cause ..."
-                oninput="this.className = ''"
-                id="COS"
-                type="text"
-              />
-            </p>
-            <label>Duration of symptom: </label>
-            <p>
-              <input
-                placeholder="Symptom duration ..."
-                oninput="this.className = ''"
-                id="DOS"
-                type="text"
-              />
-            </p>
-            <label>Type of pain feeling : </label>
-            <p>
-              <input
-                placeholder="Pain type  ..."
-                oninput="this.className = ''"
-                id="TOPF"
-                type="text"
-              />
-            </p>
-            <label>Intensity of pain(1 to 10, 10 the strongest): </label>
-            <p>
-              <input
-                placeholder="Pain type  ..."
-                oninput="this.className = ''"
-                id="PI"
-                type="number"
-                min="0"
-                max="10"
-              />
-            </p>
-            <label>Other treatments & outcomes: </label>
-            <p>
-              <textarea
-                style="width: 90%; height: 100px; resize: none"
-                placeholder="Treatments & outcomes..."
-                oninput="this.className = ''"
-                id="OTO"
-                type="text"
-              ></textarea>
-            </p>
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <select style="width: 80%" id="Headaches/migraines">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Headaches/migraines</p>
+            </div>
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Arthritis">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Arthritis</p>
+            </div>
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Cancerf">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Cancer</p>
+            </div>
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="TMJ-problems">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>TMJ problems</p>
+            </div>
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Abnormal-skin-conditions">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Abnormal skin conditions</p>
+            </div>
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Chronic-pain">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Chronic pain</p>
+            </div>
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Joint-replacement">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Joint replacement</p>
+            </div>
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Heart/circulation-problem">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Heart/circulation problem</p>
+            </div>
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Lack-of-sensation">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Lack of sensation</p>
+            </div>
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Varicose-veins">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Varicose veins</p>
+            </div>
+
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Blood-clots">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Blood clots</p>
+            </div>
+
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Neck/back-injuries">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Neck/back injuries</p>
+            </div>
+
+            <!-- 1 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Major-accident">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Major accident</p>
+            </div>
+          </div>
+          <div class="second-div">
+            <!-- 2 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 90%" id="Diabetes">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Diabetes</p>
+            </div>
+            <!-- 2 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="High/low-blood-pressure">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>High/low blood pressure</p>
+            </div>
+            <!-- 2 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Sprains,Strains">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Sprains, Strains</p>
+            </div>
+            <!-- 2 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Muscles/joint-pain">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Muscles/joint pain</p>
+            </div>
+            <!-- 2 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Hearing-problem">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Hearing problem</p>
+            </div>
+            <!-- 2 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Vision-problems">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Vision-problems</p>
+            </div>
+            <!-- 2 -->
+            <div class="radio-class">
+              <div>
+                <!-- <label>Yes</label> -->
+                <select style="width: 80%" id="Sleep-difficulties">
+                  <option value="N/A">N/A</option>
+                  <option value="x">X</option>
+                  <option value="P">P</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <p>Sleep difficulties</p>
+            </div>
+            <label>Please explain any areas noted above :</label>
+            <textarea style="width: 100%; height: 240px; resize: none" placeholder="explain..."
+              oninput="this.className = ''" id="PIT" type="text"></textarea>
           </div>
         </div>
       </div>
-      <div class="tab" id="form-part-third">
-        <h1 class="main-heading-pdf">Client History & Consent Form</h1>
-        <h2>Medical history & Condition :</h2>
-        <div class="page-wraper">
-          <div class="right-col">
-            <h4>Medical history :</h4>
-            <!-- Injuries -->
-            <div class="radio-class">
-              <p>Injuries :</p>
-              <div>
-                <input type="radio" id="InYes" name="Injuries" value="Yes" />
-                <label>Yes</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="InNo"
-                  name="Injuries"
-                  value="No"
-                  checked="checked"
-                />
-                <label>No</label>
-              </div>
-            </div>
-            <p>
-              <input
-                placeholder="Please specify  ..."
-                oninput="this.className = ''"
-                id="injuries-sp"
-                type="text"
-              />
-            </p>
-            <!-- Medications -->
+    </div>
 
-            <div class="radio-class">
-              <p>Medications :</p>
-              <div>
-                <input type="radio" id="meYes" name="Medications" value="Yes" />
-                <label>Yes</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="meNo"
-                  name="Medications"
-                  value="No"
-                  checked="checked"
-                />
-                <label>No</label>
-              </div>
-            </div>
-            <p>
-              <input
-                placeholder="Please specify  ..."
-                oninput="this.className = ''"
-                id="Medications-sp"
-                type="text"
-              />
-            </p>
-            <!-- Allergies to oil -->
-
-            <div class="radio-class">
-              <p>Allergies to oil :</p>
-              <div>
-                <input
-                  type="radio"
-                  id="alYes"
-                  name="Allergies-to-oil"
-                  value="Yes"
-                />
-                <label>Yes</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="alNo"
-                  name="Allergies-to-oil"
-                  value="No"
-                  checked="checked"
-                />
-                <label>No</label>
-              </div>
-            </div>
-            <p>
-              <input
-                placeholder="Please specify  ..."
-                oninput="this.className = ''"
-                id="Allergies-to-oil-sp"
-                type="text"
-              />
-            </p>
-            <!-- Regular exercise   -->
-            <div class="radio-class">
-              <p>Regular exercise :</p>
-              <div>
-                <input
-                  type="radio"
-                  id="reYes"
-                  name="Regular-exercise"
-                  value="Yes"
-                />
-                <label>Yes</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="reNo"
-                  name="Regular-exercise"
-                  value="No"
-                  checked="checked"
-                />
-                <label>No</label>
-              </div>
-            </div>
-            <p>
-              <input
-                placeholder="Please specify  ..."
-                oninput="this.className = ''"
-                id="Regular-exercise-sp"
-                type="text"
-              />
-            </p>
-
-            <!-- Pregnancy -->
-            <div class="radio-class">
-              <p>Pregnancy :</p>
-              <div>
-                <input type="radio" id="pYes" name="Pregnancy" value="Yes" />
-                <label>Yes</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="pNo"
-                  name="Pregnancy"
-                  value="No"
-                  checked="checked"
-                />
-                <label>No</label>
-              </div>
-            </div>
-            <p>
-              <input
-                placeholder="How many weeks?   ..."
-                oninput="this.className = ''"
-                id="Pregnancy-sp"
-                type="number"
-                min="1"
-                max="40"
-              />
-            </p>
-          </div>
-          <div class="left-col2">
-            <div class="first-div">
-              <p>
-                Medical Conditions (please mark “X” for current one(s) , “P” for
-                past history and “F” for family history ) :
-              </p>
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <select style="width: 80%" id="Headaches/migraines">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Headaches/migraines</p>
-              </div>
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Arthritis">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Arthritis</p>
-              </div>
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Cancerf">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Cancer</p>
-              </div>
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="TMJ-problems">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>TMJ problems</p>
-              </div>
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Abnormal-skin-conditions">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Abnormal skin conditions</p>
-              </div>
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Chronic-pain">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Chronic pain</p>
-              </div>
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Joint-replacement">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Joint replacement</p>
-              </div>
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Heart/circulation-problem">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Heart/circulation problem</p>
-              </div>
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Lack-of-sensation">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Lack of sensation</p>
-              </div>
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Varicose-veins">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Varicose veins</p>
-              </div>
-
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Blood-clots">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Blood clots</p>
-              </div>
-
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Neck/back-injuries">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Neck/back injuries</p>
-              </div>
-
-              <!-- 1 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Major-accident">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Major accident</p>
-              </div>
-            </div>
-            <div class="second-div">
-              <!-- 2 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 90%" id="Diabetes">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Diabetes</p>
-              </div>
-              <!-- 2 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="High/low-blood-pressure">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>High/low blood pressure</p>
-              </div>
-              <!-- 2 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Sprains,Strains">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Sprains, Strains</p>
-              </div>
-              <!-- 2 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Muscles/joint-pain">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Muscles/joint pain</p>
-              </div>
-              <!-- 2 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Hearing-problem">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Hearing problem</p>
-              </div>
-              <!-- 2 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Vision-problems">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Vision-problems</p>
-              </div>
-              <!-- 2 -->
-              <div class="radio-class">
-                <div>
-                  <!-- <label>Yes</label> -->
-                  <select style="width: 80%" id="Sleep-difficulties">
-                    <option value="N/A">N/A</option>
-                    <option value="x">X</option>
-                    <option value="P">P</option>
-                    <option value="F">F</option>
-                  </select>
-                </div>
-                <p>Sleep difficulties</p>
-              </div>
-              <label>Please explain any areas noted above :</label>
-              <textarea
-                style="width: 100%; height: 240px; resize: none"
-                placeholder="explain..."
-                oninput="this.className = ''"
-                id="PIT"
-                type="text"
-              ></textarea>
-            </div>
-          </div>
+    <div class="tab" id="form-part-forth">
+      <h1 class="main-heading-pdf">Client History & Consent Form</h1>
+      <div class="page-wraper">
+        <div class="right-col">
+          <h2>Client Acknowledgement and Consent :</h2>
+          <p>I acknowledge that:</p>
+          <ul>
+            <li>
+              My therapist does not diagnose illnesses, prescribe medications
+              nor physically manipulate the spine or its immediate
+              articulations., and I agree not to interpret their comments as
+              medical advice.
+            </li>
+            <li>
+              Massage can produce negative effects for individuals with
+              certain conditions, and I confirm that I have stated all my
+              known medical conditions and answered all questions honestly. I
+              also agree to keep my therapist updated of any changes in my
+              conditions.
+            </li>
+            <li>
+              Massage can produce short term side-effects such as muscle
+              soreness, mild bruising, increased awareness of areas of pain
+              and light-headedness amongst other possible temporary outcomes.
+            </li>
+            <li>
+              The actual massage treatment may be shorter in duration than the
+              total consultation time to allow time for assessments, dressing
+              / undressing, demonstration of stretches, payment, etc.
+            </li>
+            <li>
+              My therapist will not be liable for, nor will they accept any
+              responsibility for any injury, loss or damage howsoever
+              sustained by any person or persons arising out of any of the
+              treatments or procedures delivered in this Practice or in any
+              way whatsoever which does not arise from any negligent act or
+              omission of the Practice Director and employees.
+            </li>
+            <li>
+              I will tell the therapist about any discomfort I may experience
+              during the therapy session and understand that the therapy will
+              be adjusted accordingly.
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <div class="tab" id="form-part-forth">
-        <h1 class="main-heading-pdf">Client History & Consent Form</h1>
-        <div class="page-wraper">
-          <div class="right-col">
-            <h2>Client Acknowledgement and Consent :</h2>
-            <p>I acknowledge that:</p>
-            <ul>
-              <li>
-                My therapist does not diagnose illnesses, prescribe medications
-                nor physically manipulate the spine or its immediate
-                articulations., and I agree not to interpret their comments as
-                medical advice.
-              </li>
-              <li>
-                Massage can produce negative effects for individuals with
-                certain conditions, and I confirm that I have stated all my
-                known medical conditions and answered all questions honestly. I
-                also agree to keep my therapist updated of any changes in my
-                conditions.
-              </li>
-              <li>
-                Massage can produce short term side-effects such as muscle
-                soreness, mild bruising, increased awareness of areas of pain
-                and light-headedness amongst other possible temporary outcomes.
-              </li>
-              <li>
-                The actual massage treatment may be shorter in duration than the
-                total consultation time to allow time for assessments, dressing
-                / undressing, demonstration of stretches, payment, etc.
-              </li>
-              <li>
-                My therapist will not be liable for, nor will they accept any
-                responsibility for any injury, loss or damage howsoever
-                sustained by any person or persons arising out of any of the
-                treatments or procedures delivered in this Practice or in any
-                way whatsoever which does not arise from any negligent act or
-                omission of the Practice Director and employees.
-              </li>
-              <li>
-                I will tell the therapist about any discomfort I may experience
-                during the therapy session and understand that the therapy will
-                be adjusted accordingly.
-              </li>
-            </ul>
-          </div>
-          <div class="right-col">
-            <p style="margin-left: 25px">I consent to:</p>
-            <ul>
-              <li>
-                My therapist massaging me by applying direct skin contact, using
-                massage oils, blends or lotions.
-              </li>
-              <li>
-                My medical information and treatment notes being accessed by
-                other BBC Massage’s therapists.
-              </li>
-              <li>
-                My medical information and treatment notes being released to
-                other, third-party, health practitioners whom I agree for my
-                therapist to refer me to.
-              </li>
-              <li>
-                My therapist disclosing my personal information, if required to
-                by law.
-              </li>
-              <li>
-                Receiving occasional informative and/or promotional emails from
-                BBC Massage.
-              </li>
-            </ul>
-            <p style="margin-left: 25px">
-              I confirm that to the best of my knowledge, the above information
-              given is correct.
-            </p>
-            <!-- <div class="signature"></div> -->
-            <script type="text/paperscript" canvas="sheet2">
+        <div class="right-col">
+          <p style="margin-left: 25px">I consent to:</p>
+          <ul>
+            <li>
+              My therapist massaging me by applying direct skin contact, using
+              massage oils, blends or lotions.
+            </li>
+            <li>
+              My medical information and treatment notes being accessed by
+              other BBC Massage’s therapists.
+            </li>
+            <li>
+              My medical information and treatment notes being released to
+              other, third-party, health practitioners whom I agree for my
+              therapist to refer me to.
+            </li>
+            <li>
+              My therapist disclosing my personal information, if required to
+              by law.
+            </li>
+            <li>
+              Receiving occasional informative and/or promotional emails from
+              BBC Massage.
+            </li>
+          </ul>
+          <p style="margin-left: 25px">
+            I confirm that to the best of my knowledge, the above information
+            given is correct.
+          </p>
+          <!-- <div class="signature"></div> -->
+          <script type="text/paperscript" canvas="sheet2">
               var path;
               window.pencolor = "black";
               console.log("pen color",window.pencolor)
@@ -797,41 +635,34 @@
               function onMouseUp(event) {
               }
             </script>
-            <div id="signature-box">
-              <canvas
-                class="canvas-daw-signature"
-                id="sheet2"
-                width="400px"
-                height="200px"
-              ></canvas>
-            </div>
-            <div
-              class="eraser-white-color-canvas canvas-pen-common"
-              id="eraser-canvas-2"
-            ></div>
-            <div class="canvas-black-pen canvas-pen-common" id="black1"></div>
+          <div id="signature-box">
+            <canvas class="canvas-daw-signature" id="sheet2" width="400px" height="200px"></canvas>
           </div>
-        </div>
-        <!-- <input type="button" value="Print Div Contents" id="btnPrint" /> -->
-      </div>
-      <div style="overflow: auto">
-        <div style="float: right; margin-right: 5%">
-          <button type="button" id="prevBtn" onclick="nextPrev(-1)">
-            Previous
-          </button>
-          <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          <div class="eraser-white-color-canvas canvas-pen-common" id="eraser-canvas-2"></div>
+          <div class="canvas-black-pen canvas-pen-common" id="black1"></div>
         </div>
       </div>
-      <!-- Circles which indicates the steps of the form: -->
-      <div style="text-align: center; margin-top: 40px">
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
+      <!-- <input type="button" value="Print Div Contents" id="btnPrint" /> -->
+    </div>
+    <div style="overflow: auto">
+      <div style="float: right; margin-right: 5%">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+          Previous
+        </button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
       </div>
-    </form>
-    <script src="./canvasDraw.js"></script>
+    </div>
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align: center; margin-top: 40px">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+  </form>
+  <script src="./canvasDraw.js"></script>
 
-    <script src="./index.js"></script>
-  </body>
+  <script src="./index.js"></script>
+</body>
+
 </html>
