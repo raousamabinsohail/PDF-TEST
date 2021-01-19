@@ -179,14 +179,24 @@ button:hover {
 }
 .eraser-canvas {
   position: absolute;
-  top: 99%;
+  margin-top: 79%;
   left: 19.5%;
   font-size: 12px;
 }
 .eraser-white-color-canvas {
   position: absolute;
-  top: 95%;
+  margin-top: 550px;
   left: 20%;
+  background: white;
+  border: 2px solid;
+}
+.eraser-white-color-canvas-2 {
+  /* position: absolute; */
+  margin-top: 20px;
+  right: 40%;
+  /* left: 10%; */
+  /* margin-left: 00px; */
+  /* margin-right: 550px; */
   background: white;
   border: 2px solid;
 }
@@ -214,8 +224,13 @@ button:hover {
   background: orange;
 }
 .canvas-black-pen {
-  top: 95%;
+  margin-top: 550px;
   left: 32%;
+  background: black;
+}
+.canvas-black-pen-2 {
+  margin-top: 20px;
+  left: 62%;
   background: black;
 }
 .signature {
@@ -242,13 +257,6 @@ button:hover {
   margin-top: -px;
 }
 
-#black1 {
-  margin-left: 400px;
-}
-#black2 {
-  margin-left: -100px;
-  margin-top: 0px;
-}
 @media screen and (min-width: 1000px) and (min-height: 1700px) {
   body {
     max-width: 500px;
