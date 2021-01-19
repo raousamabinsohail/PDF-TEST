@@ -26,8 +26,8 @@ body {
   margin-left: 5%;
   font-family: Raleway;
   padding: 40px;
-  min-width: 1400px;
-  max-width: 1400px;
+  /* min-width: 1400px; */
+  /* max-width: 1400px; */
 }
 
 h1 {
@@ -101,7 +101,11 @@ button {
 button:hover {
   opacity: 0.8;
 }
-
+.bodyimg-pic {
+  width: 80%;
+  height: 60%;
+  border: 2px solid black;
+}
 #prevBtn {
   background-color: #bbbbbb;
 }
@@ -161,9 +165,9 @@ button:hover {
 
 .canvas-draw-box {
   position: absolute;
-  top: 35%;
+  margin-top: 35%;
   left: 10%;
-  border: 2px solid;
+  /* border: 2px solid; */
   cursor: pointer;
 }
 
@@ -220,7 +224,7 @@ button:hover {
   height: 30%;
 }
 #sheet {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   margin-top: 10px;
   z-index: 1;
 }
