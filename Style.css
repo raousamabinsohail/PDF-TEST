@@ -262,12 +262,12 @@ button:hover {
     max-width: 500px;
   }
   #sheet {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     /* z-index: 1; */
-    padding: 0%;
-    margin-top: -460px;
+    /* padding: 0%; */
+    /* margin-top: -460px; */
     /* max-width: 410px !important; */
-    margin-left: -15px;
+    /* margin-left: -15px; */
     /* height: 310px !important; */
   }
   #regForm {
